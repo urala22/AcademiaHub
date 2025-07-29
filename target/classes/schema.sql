@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS licenses (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    license_key VARCHAR(255) NOT NULL,
+    assigned_to VARCHAR(100),
+    start_date DATETIME,
+    end_date DATETIME,
+    status ENUM('AVAILABLE', 'ASSIGNED', 'EXPIRED') DEFAULT 'AVAILABLE'
+);
